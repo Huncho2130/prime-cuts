@@ -12,7 +12,8 @@ export interface Product {
 interface CartContextType {
   cart: any[]
   addToCart: (product: Product) => void
-  itemCount: number // Add this
+  removeFromCart: (id: string) => void // ADD THIS
+  itemCount: number
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
@@ -33,11 +34,16 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     alert(`${product.name} added to cart!`)
   }
 
+  // ADD THIS FUNCTION
+  const removeFromCart = (id: string) => {
+    setCart(prev => prev.filter(item => item.id !== id))
+  }
+
   // Calculate item count
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0)
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, itemCount }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, itemCount }}>
       {children}
     </CartContext.Provider>
   )
