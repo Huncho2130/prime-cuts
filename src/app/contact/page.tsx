@@ -410,6 +410,93 @@ export default function Contact() {
                     </svg>
                     Facebook
                   </a>
+
+{/* Instagram */}
+  <a 
+    href="https://www.instagram.com/primecutskenya" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{
+      background: 'linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)',
+      color: 'white',
+      padding: '12px 16px',
+      borderRadius: '10px',
+      textDecoration: 'none',
+      fontWeight: '600',
+      fontSize: '14px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.75-.5a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5z"/>
+    </svg>
+    Instagram
+  </a>
+
+  {/* TikTok */}
+  <a 
+    href="https://www.tiktok.com/@user30739739049823" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{
+      background: '#000000',
+      color: 'white',
+      padding: '12px 16px',
+      borderRadius: '10px',
+      textDecoration: 'none',
+      fontWeight: '600',
+      fontSize: '14px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.001 2.002c.838 0 1.522.684 1.522 1.522v10.274a2.743 2.743 0 1 1-2.743-2.742c.37 0 .734.08 1.071.23V7.262a6.054 6.054 0 1 0 4.984 5.955V9.744a5.56 5.56 0 0 0 3.727 1.37V7.989a3.964 3.964 0 0 1-3.727-3.953v-.534A1.522 1.522 0 0 0 15.312 2h-3.31z"/>
+    </svg>
+    TikTok
+  </a>
+
+  {/* X (Twitter) */}
+  <a 
+    href="https://twitter.com/primecutskenya" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{
+      background: '#000000',
+      color: 'white',
+      padding: '12px 16px',
+      borderRadius: '10px',
+      textDecoration: 'none',
+      fontWeight: '600',
+      fontSize: '14px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22.162 2H17.9l-5.2 7.252L7.8 2H1.838l6.87 9.634L1.9 22h5.26l4.095-6.016L15.45 22h5.146l-6.843-9.366L22.162 2z"/>
+    </svg>
+    X
+  </a>
+
+
+
+
+
+
+
+
+
+
+
+
                   
                   {/* Add other social media buttons here */}
                 </div>
@@ -559,3 +646,4 @@ export default function Contact() {
     </div>
   )
 }
+
