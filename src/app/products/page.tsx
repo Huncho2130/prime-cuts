@@ -410,6 +410,36 @@ function ProductsContent() {
         </div>
       </div>
 
+
+{/* Halal Logo Section */}
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: '20px 40px',
+    marginTop: '40px'
+  }}
+>
+  <img
+    src="/halal.png"
+    alt="Halal Certified"
+    style={{
+      width: '90px',
+      height: '90px',
+      objectFit: 'contain',
+      opacity: 0.9,
+      transition: 'all 0.3s ease',
+      filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.2))',
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.opacity = '1')}
+    onMouseOut={(e) => (e.currentTarget.style.opacity = '0.9')}
+  />
+</div>
+
+
+
+      
       {/* Footer */}
       <footer style={{
         background: '#1a202c',
@@ -435,3 +465,4 @@ export default function ProductsPage() {
       <ProductsContent />
     </CartProvider>
   )}
+
