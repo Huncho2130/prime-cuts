@@ -95,20 +95,30 @@ export default function Home() {
         </div>
         
         {/* Top Info Bar - Updated */}
-        <div style={{
-          background: '#D4AF37',
-          color: '#36454F',
-          padding: '8px 20px',
-          fontSize: '14px',
-          fontWeight: '500',
-          textAlign: 'center'
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
-            <span>🥩 Premium Quality Meats</span>
-            <span>📞 +254 799 691784</span>
-            <span>⭐ 5-Star Rated Service</span>
-          </div>
-        </div>
+<div style={{
+  background: '#2f3a42', // dark variant of header
+  color: '#D4AF37',
+  padding: '6px 20px',
+  fontSize: '13px',
+  fontWeight: '500',
+  textAlign: 'center',
+}}>
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: '5px',
+  }}>
+    <span>🥩 Premium Quality Meats</span>
+    <span>📞 +254 799 691784</span>
+    <span>⭐ 5-Star Rated Service</span>
+  </div>
+</div>
+
+
+        
       </header>
 
       {/* Hero Section - DEBUGGED AND FIXED */}
