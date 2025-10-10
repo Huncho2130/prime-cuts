@@ -155,7 +155,7 @@ export default function Home() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(135deg, rgba(128, 0, 32, 0.48) 0%, rgba(54, 69, 79, 0.48) 100%)',
+          background: 'linear-gradient(135deg, rgba(128, 0, 32, 0.40) 0%, rgba(54, 69, 79, 0.40) 100%)',
           zIndex: 2
         }}>
         </div>
