@@ -76,6 +76,10 @@ export default function Home() {
               </h1>
               <p style={{
                 color: 'white',
+
+      /* Classic luxury feel */
+        font-family: 'Cormorant Garamond', serif;
+              
                 fontSize: '14px',
                 margin: '2px 0 0 0',
                 fontWeight: '500',
