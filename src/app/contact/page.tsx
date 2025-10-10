@@ -647,3 +647,160 @@ export default function Contact() {
   )
 }
 
+// ... (your existing contact page code ends with the contact form section)
+
+      {/* Google Maps Section - ADD THIS RIGHT HERE */}
+      <section style={{ padding: '60px 20px', background: '#f8fafc' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ 
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            color: '#36454F',
+            marginBottom: '40px',
+            fontFamily: 'Playfair Display, serif'
+          }}>
+            Visit Our Store
+          </h2>
+          
+          {/* Map Container */}
+          <div style={{
+            borderRadius: '20px',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+            border: '2px solid rgba(212, 175, 55, 0.2)',
+            height: '400px'
+          }}>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.817476559441!2d36.82021457568751!3d-1.2830994356517475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d43db7d6a9%3A0x4a37c6aded9a7d1c!2sCity%20Market%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Prime Cuts Kenya Location"
+            />
+          </div>
+          
+          {/* Map Info */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '30px',
+            marginTop: '40px',
+            textAlign: 'left'
+          }}>
+            <div style={{
+              background: 'white',
+              padding: '25px',
+              borderRadius: '12px',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
+            }}>
+              <h3 style={{ 
+                fontSize: '1.3rem',
+                fontWeight: 'bold',
+                color: '#36454F',
+                marginBottom: '15px',
+                fontFamily: 'Playfair Display, serif'
+              }}>
+                📍 Location Details
+              </h3>
+              <p style={{ 
+                color: '#4a5568',
+                lineHeight: '1.6',
+                margin: 0,
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                <strong>City Market, Nairobi CBD</strong><br />
+                Ground Floor, Stall 63<br />
+                Near the main entrance<br />
+                Nairobi, Kenya
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              padding: '25px',
+              borderRadius: '12px',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
+            }}>
+              <h3 style={{ 
+                fontSize: '1.3rem',
+                fontWeight: 'bold',
+                color: '#36454F',
+                marginBottom: '15px',
+                fontFamily: 'Playfair Display, serif'
+              }}>
+                🅿️ Parking Info
+              </h3>
+              <p style={{ 
+                color: '#4a5568',
+                lineHeight: '1.6',
+                margin: 0,
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                <strong>Ample parking available</strong><br />
+                • Secure parking within City Market<br />
+                • Affordable daily rates<br />
+                • 24/7 security surveillance
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              padding: '25px',
+              borderRadius: '12px',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
+            }}>
+              <h3 style={{ 
+                fontSize: '1.3rem',
+                fontWeight: 'bold',
+                color: '#36454F',
+                marginBottom: '15px',
+                fontFamily: 'Playfair Display, serif'
+              }}>
+                🚶 Getting Here
+              </h3>
+              <p style={{ 
+                color: '#4a5568',
+                lineHeight: '1.6',
+                margin: 0,
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                <strong>Easy to find</strong><br />
+                • 5-min walk from Kenyatta Avenue<br />
+                • Near Hilton Hotel<br />
+                • Accessible by all matatu routes
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer - THIS SHOULD COME RIGHT AFTER THE MAPS SECTION */}
+      <footer style={{
+        background: '#1a202c',
+        color: 'white',
+        padding: '40px 20px',
+        textAlign: 'center'
+      }}>
+        <p style={{ 
+          margin: 0, 
+          fontSize: '1rem',
+          fontFamily: 'Inter, sans-serif'
+        }}>
+          &copy; 2025 Prime Cuts Kenya. All rights reserved.
+        </p>
+        <p style={{ 
+          margin: '10px 0 0 0', 
+          color: '#D4AF37', 
+          fontSize: '14px',
+          fontWeight: '500',
+          fontFamily: 'Inter, sans-serif'
+        }}>
+          Premium Meats & Seafood • Nairobi's Trusted Butcher Since 2020
+        </p>
+      </footer>
+    </div>
+  )
+}
