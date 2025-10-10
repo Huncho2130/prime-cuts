@@ -640,14 +640,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Rest of your contact page remains the same */}
-      {/* ... Google Maps section ... */}
-      {/* ... Footer ... */}
-    </div>
-  )
-}
-
-// ... (your existing contact page code ends with the contact form section)
+      // ... (your existing contact page code ends with the contact form section)
 
       {/* Google Maps Section - ADD THIS RIGHT HERE */}
       <section style={{ padding: '60px 20px', background: '#f8fafc' }}>
@@ -804,3 +797,9 @@ export default function Contact() {
     </div>
   )
 }
+      
+      
+    </div>
+  )
+}
+
