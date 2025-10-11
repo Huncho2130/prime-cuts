@@ -2,16 +2,13 @@
 import { useEffect } from 'react'
 
 export default function Contact() {
-  // ADD PRELOAD EFFECT HERE
   useEffect(() => {
-    // Preload other pages when user hovers over nav links
     const navLinks = document.querySelectorAll('nav a')
     
     navLinks.forEach(link => {
       link.addEventListener('mouseenter', () => {
         const href = link.getAttribute('href')
         if (href && href !== window.location.pathname) {
-          // Prefetch the page
           const linkElement = document.createElement('link')
           linkElement.rel = 'prefetch'
           linkElement.href = href
@@ -26,16 +23,10 @@ export default function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
     
-    // Create formatted message for WhatsApp
     const message = `*NEW CUSTOMER MESSAGE*%0A%0A*👤 Name:* ${data.first_name} ${data.last_name}%0A*📧 Email:* ${data.email}%0A*📞 Phone:* ${data.phone || 'Not provided'}%0A*💬 Message:*%0A${data.message}%0A%0A*📍 Sent via Prime Cuts Website*`;
     
-    // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/254799691784?text=${message}`, '_blank');
-    
-    // Reset form
     e.currentTarget.reset();
-    
-    // Show success message
     alert('✅ Message ready! Opening WhatsApp to send...');
   };
 
@@ -52,9 +43,7 @@ export default function Contact() {
         zIndex: 40
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-          {/* Logo and Brand Section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            {/* Logo Image */}
             <div style={{
               width: '60px',
               height: '60px',
@@ -90,7 +79,6 @@ export default function Contact() {
               />
             </div>
             
-            {/* Brand Name and Location */}
             <div>
               <h1 style={{ 
                 fontSize: '1.8rem', 
@@ -108,7 +96,7 @@ export default function Contact() {
                 fontWeight: '500',
                 opacity: '0.9'
               }}>
-                
+                📍 City Market, Nairobi CBD
               </p>
             </div>
           </div>
@@ -121,31 +109,14 @@ export default function Contact() {
           </nav>
         </div>
         
-       
-
-
-   {/* Top Info Bar - Updated */}
-<div style={{
-  background: '#2f3a42', // dark variant of header
-  color: '#D4AF37',
-  padding: '6px 20px',
-  fontSize: '13px',
-  fontWeight: '500',
-  textAlign: 'center',
-}}>
-  <div style={{
-    maxWidth: '1200px',
-    margin: '0 auto',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    gap: '5px',
-  }}>
-
-
-
-          
-          
+        <div style={{
+          background: '#D4AF37',
+          color: '#36454F',
+          padding: '8px 20px',
+          fontSize: '14px',
+          fontWeight: '500',
+          textAlign: 'center'
+        }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
             <span>📍 City Market, Nairobi CBD</span>
             <span>📞 +254 799 691784</span>
@@ -154,8 +125,7 @@ export default function Contact() {
         </div>
       </header>
 
-      {/* Rest of your contact page code remains exactly the same */}
-      {/* Hero Section - UPDATED WITH SOFTER DESIGN */}
+      {/* Hero Section */}
       <section style={{
         position: 'relative',
         color: 'white',
@@ -167,7 +137,6 @@ export default function Contact() {
         justifyContent: 'center',
         overflow: 'hidden'
       }}>
-        {/* Background Image Layer */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -178,11 +147,9 @@ export default function Contact() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          zIndex: 1,
-          transition: 'transform 0.8s ease'
+          zIndex: 1
         }} />
         
-        {/* Softer Gradient Overlay */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -190,25 +157,21 @@ export default function Contact() {
           right: 0,
           bottom: 0,
           background: 'linear-gradient(135deg, rgba(128, 0, 32, 0.70) 0%, rgba(54, 69, 79, 0.70) 100%)',
-          zIndex: 2,
-          backdropFilter: 'blur(1px)'
+          zIndex: 2
         }} />
         
-        {/* Content */}
         <div style={{
           position: 'relative',
           zIndex: 3,
           maxWidth: '800px',
-          margin: '0 auto',
-          transition: 'transform 0.5s ease'
+          margin: '0 auto'
         }}>
           <h1 style={{ 
             fontSize: '3.5rem', 
             fontWeight: 'bold',
             marginBottom: '20px',
             lineHeight: '1.1',
-            textShadow: '2px 2px 8px rgba(0,0,0,0.3)',
-            transition: 'all 0.5s ease'
+            textShadow: '2px 2px 8px rgba(0,0,0,0.3)'
           }}>
             GET IN TOUCH
           </h1>
@@ -218,8 +181,7 @@ export default function Contact() {
             lineHeight: '1.6',
             maxWidth: '600px',
             textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
-            opacity: '0.95',
-            transition: 'all 0.5s ease'
+            opacity: '0.95'
           }}>
             We're here to serve you with the finest cuts and exceptional service. 
             Reach out anytime!
@@ -247,7 +209,6 @@ export default function Contact() {
               </h2>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-                {/* Location */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
                   <div style={{
                     background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 100%)',
@@ -278,7 +239,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Phone */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
                   <div style={{
                     background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
@@ -320,7 +280,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
                   <div style={{
                     background: 'linear-gradient(135deg, #800020 0%, #600018 100%)',
@@ -360,7 +319,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Business Hours */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
                   <div style={{
                     background: 'linear-gradient(135deg, #36454F 0%, #2a363f 100%)',
@@ -388,133 +346,6 @@ export default function Contact() {
                       Sunday: 8:00 AM - 6:00 PM
                     </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div style={{ marginTop: '40px' }}>
-                <h3 style={{ 
-                  fontSize: '1.3rem',
-                  fontWeight: 'bold',
-                  color: '#36454F',
-                  marginBottom: '20px'
-                }}>
-                  Follow Us
-                </h3>
-                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                  {/* Social media buttons remain the same */}
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=61564890268110" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    style={{
-                      background: '#1877F2',
-                      color: 'white',
-                      padding: '12px 16px',
-                      borderRadius: '10px',
-                      textDecoration: 'none',
-                      fontWeight: '600',
-                      fontSize: '14px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                    Facebook
-                  </a>
-
-{/* Instagram */}
-  <a 
-    href="https://www.instagram.com/primecutskenya" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    style={{
-      background: 'linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)',
-      color: 'white',
-      padding: '12px 16px',
-      borderRadius: '10px',
-      textDecoration: 'none',
-      fontWeight: '600',
-      fontSize: '14px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '8px',
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.75-.5a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5z"/>
-    </svg>
-    Instagram
-  </a>
-
-  {/* TikTok */}
-  <a 
-    href="https://www.tiktok.com/@user30739739049823" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    style={{
-      background: '#000000',
-      color: 'white',
-      padding: '12px 16px',
-      borderRadius: '10px',
-      textDecoration: 'none',
-      fontWeight: '600',
-      fontSize: '14px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '8px',
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.001 2.002c.838 0 1.522.684 1.522 1.522v10.274a2.743 2.743 0 1 1-2.743-2.742c.37 0 .734.08 1.071.23V7.262a6.054 6.054 0 1 0 4.984 5.955V9.744a5.56 5.56 0 0 0 3.727 1.37V7.989a3.964 3.964 0 0 1-3.727-3.953v-.534A1.522 1.522 0 0 0 15.312 2h-3.31z"/>
-    </svg>
-    TikTok
-  </a>
-
-  {/* X (Twitter) */}
-  <a 
-    href="https://twitter.com/primecutskenya" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    style={{
-      background: '#000000',
-      color: 'white',
-      padding: '12px 16px',
-      borderRadius: '10px',
-      textDecoration: 'none',
-      fontWeight: '600',
-      fontSize: '14px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '8px',
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22.162 2H17.9l-5.2 7.252L7.8 2H1.838l6.87 9.634L1.9 22h5.26l4.095-6.016L15.45 22h5.146l-6.843-9.366L22.162 2z"/>
-    </svg>
-    X
-  </a>
-
-
-
-
-
-
-
-
-
-
-
-
-                  
-                  {/* Add other social media buttons here */}
                 </div>
               </div>
             </div>
@@ -548,7 +379,6 @@ export default function Contact() {
                         border: '2px solid #e5e7eb',
                         borderRadius: '10px',
                         fontSize: '15px',
-                        transition: 'all 0.3s ease',
                         background: 'white'
                       }}
                       required
@@ -565,7 +395,6 @@ export default function Contact() {
                         border: '2px solid #e5e7eb',
                         borderRadius: '10px',
                         fontSize: '15px',
-                        transition: 'all 0.3s ease',
                         background: 'white'
                       }}
                       required
@@ -583,7 +412,6 @@ export default function Contact() {
                     border: '2px solid #e5e7eb',
                     borderRadius: '10px',
                     fontSize: '15px',
-                    transition: 'all 0.3s ease',
                     background: 'white'
                   }}
                   required
@@ -599,7 +427,6 @@ export default function Contact() {
                     border: '2px solid #e5e7eb',
                     borderRadius: '10px',
                     fontSize: '15px',
-                    transition: 'all 0.3s ease',
                     background: 'white'
                   }}
                 />
@@ -614,7 +441,6 @@ export default function Contact() {
                     border: '2px solid #e5e7eb',
                     borderRadius: '10px',
                     fontSize: '15px',
-                    transition: 'all 0.3s ease',
                     background: 'white',
                     resize: 'vertical',
                     fontFamily: 'inherit'
@@ -632,9 +458,7 @@ export default function Contact() {
                     border: 'none',
                     fontSize: '16px',
                     fontWeight: 'bold',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
+                    cursor: 'pointer'
                   }}
                 >
                   💬 Send via WhatsApp
@@ -656,22 +480,18 @@ export default function Contact() {
         </div>
       </section>
 
-      
-
-      {/* Google Maps Section - ADD THIS RIGHT HERE */}
+      {/* Google Maps Section */}
       <section style={{ padding: '60px 20px', background: '#f8fafc' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ 
             fontSize: '2.5rem',
             fontWeight: 'bold',
             color: '#36454F',
-            marginBottom: '40px',
-            fontFamily: 'Playfair Display, serif'
+            marginBottom: '40px'
           }}>
             Visit Our Store
           </h2>
           
-          {/* Map Container */}
           <div style={{
             borderRadius: '20px',
             overflow: 'hidden',
@@ -690,122 +510,24 @@ export default function Contact() {
               title="Prime Cuts Kenya Location"
             />
           </div>
-          
-          {/* Map Info */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '30px',
-            marginTop: '40px',
-            textAlign: 'left'
-          }}>
-            <div style={{
-              background: 'white',
-              padding: '25px',
-              borderRadius: '12px',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
-            }}>
-              <h3 style={{ 
-                fontSize: '1.3rem',
-                fontWeight: 'bold',
-                color: '#36454F',
-                marginBottom: '15px',
-                fontFamily: 'Playfair Display, serif'
-              }}>
-                📍 Location Details
-              </h3>
-              <p style={{ 
-                color: '#4a5568',
-                lineHeight: '1.6',
-                margin: 0,
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                <strong>City Market, Nairobi CBD</strong><br />
-                Ground Floor, Stall 63<br />
-                Near the main entrance<br />
-                Nairobi, Kenya
-              </p>
-            </div>
-
-            <div style={{
-              background: 'white',
-              padding: '25px',
-              borderRadius: '12px',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
-            }}>
-              <h3 style={{ 
-                fontSize: '1.3rem',
-                fontWeight: 'bold',
-                color: '#36454F',
-                marginBottom: '15px',
-                fontFamily: 'Playfair Display, serif'
-              }}>
-                🅿️ Parking Info
-              </h3>
-              <p style={{ 
-                color: '#4a5568',
-                lineHeight: '1.6',
-                margin: 0,
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                <strong>Ample parking available</strong><br />
-                • Secure parking within City Market<br />
-                • Affordable daily rates<br />
-                • 24/7 security surveillance
-              </p>
-            </div>
-
-            <div style={{
-              background: 'white',
-              padding: '25px',
-              borderRadius: '12px',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.08)'
-            }}>
-              <h3 style={{ 
-                fontSize: '1.3rem',
-                fontWeight: 'bold',
-                color: '#36454F',
-                marginBottom: '15px',
-                fontFamily: 'Playfair Display, serif'
-              }}>
-                🚶 Getting Here
-              </h3>
-              <p style={{ 
-                color: '#4a5568',
-                lineHeight: '1.6',
-                margin: 0,
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                <strong>Easy to find</strong><br />
-                • 5-min walk from Kenyatta Avenue<br />
-                • Near Hilton Hotel<br />
-                • Accessible by all matatu routes
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Footer - THIS SHOULD COME RIGHT AFTER THE MAPS SECTION */}
+      {/* Footer */}
       <footer style={{
         background: '#1a202c',
         color: 'white',
         padding: '40px 20px',
         textAlign: 'center'
       }}>
-        <p style={{ 
-          margin: 0, 
-          fontSize: '1rem',
-          fontFamily: 'Inter, sans-serif'
-        }}>
+        <p style={{ margin: 0, fontSize: '1rem' }}>
           &copy; 2025 Prime Cuts Kenya. All rights reserved.
         </p>
         <p style={{ 
           margin: '10px 0 0 0', 
           color: '#D4AF37', 
           fontSize: '14px',
-          fontWeight: '500',
-          fontFamily: 'Inter, sans-serif'
+          fontWeight: '500'
         }}>
           Premium Meats & Seafood • Nairobi's Trusted Butcher Since 2020
         </p>
@@ -813,11 +535,5 @@ export default function Contact() {
     </div>
   )
 }
-      
-      
-    
-  
-
-
 
 
