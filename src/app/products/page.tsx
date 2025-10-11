@@ -474,7 +474,9 @@ export default function ProductsPage() {
       <ProductsContent />
     </CartProvider>
   )
-      
+}
+
+
 
 
 
