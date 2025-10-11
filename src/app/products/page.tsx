@@ -237,7 +237,7 @@ function ProductsContent() {
                   PRIME CUTS KENYA
                 </h1>
                 <p style={{ color: 'white', fontSize: '14px', margin: '2px 0 0 0', fontWeight: '500' }}>
-                  📍 City Market, Nairobi CBD
+                
                 </p>
               </div>
             </div>
@@ -346,14 +346,23 @@ function ProductsContent() {
           </nav>
         </div>
         
-        {/* Top Info Bar */}
-        <div style={{
-          background: '#D4AF37',
-          color: '#36454F',
-          padding: '8px 20px',
-          fontSize: '14px',
-          fontWeight: '500',
-          textAlign: 'center'
+          {/* Top Info Bar - Updated */}
+<div style={{
+  background: '#2f3a42', // dark variant of header
+  color: '#D4AF37',
+  padding: '6px 20px',
+  fontSize: '13px',
+  fontWeight: '500',
+  textAlign: 'center',
+}}>
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: '5px',
+  }}>
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
             <span>📍 City Market, Nairobi CBD</span>
@@ -465,5 +474,6 @@ export default function ProductsPage() {
       <ProductsContent />
     </CartProvider>
   )}
+
 
 
