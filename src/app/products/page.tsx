@@ -346,30 +346,34 @@ function ProductsContent() {
           </nav>
         </div>
         
-          {/* Top Info Bar - Updated */}
-<div style={{
-  background: '#2f3a42', // dark variant of header
-  color: '#D4AF37',
-  padding: '6px 20px',
-  fontSize: '13px',
-  fontWeight: '500',
-  textAlign: 'center',
-}}>
-  <div style={{
-    maxWidth: '1200px',
-    margin: '0 auto',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    gap: '5px',
-  
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
-            <span>📍 City Market, Nairobi CBD</span>
-            <span>📞 +254 799 691784</span>
-            <span>⭐ Premium Quality Guaranteed</span>
-          </div>
-        </div>
+          
+{/* Top Info Bar - Updated */}
+<div
+  style={{
+    background: '#2f3a42',
+    color: '#D4AF37',
+    padding: '6px 20px',
+    fontSize: '13px',
+    fontWeight: '500',
+    textAlign: 'center',
+  }}
+>
+  <div
+    style={{
+      maxWidth: '1200px',
+      margin: '0 auto',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      gap: '5px',
+    }}
+  >
+    <span>📍 City Market, Nairobi CBD</span>
+    <span>📞 +254 799 691784</span>
+    <span>⭐ Premium Quality Guaranteed</span>
+  </div>
+</div>
+
       
 
       {/* Main Content */}
@@ -475,6 +479,7 @@ export default function ProductsPage() {
     </CartProvider>
   )
 }
+
 
 
 
