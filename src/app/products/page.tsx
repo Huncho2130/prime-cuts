@@ -362,7 +362,7 @@ function ProductsContent() {
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     gap: '5px',
-  }}>
+  
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
             <span>📍 City Market, Nairobi CBD</span>
@@ -474,6 +474,7 @@ export default function ProductsPage() {
       <ProductsContent />
     </CartProvider>
   )}
+
 
 
 
