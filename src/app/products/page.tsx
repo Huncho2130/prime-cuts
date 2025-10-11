@@ -466,10 +466,7 @@ function ProductsContent() {
         </p>
       </footer>
 
-      <Cart />
-    </div>
-  );
-}
+     
 
 export default function ProductsPage() {
   return (
@@ -482,5 +479,6 @@ export default function ProductsPage() {
 
       
       
+
 
 
