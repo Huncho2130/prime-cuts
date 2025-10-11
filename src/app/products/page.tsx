@@ -370,7 +370,7 @@ function ProductsContent() {
             <span>⭐ Premium Quality Guaranteed</span>
           </div>
         </div>
-      </header>
+      
 
       {/* Main Content */}
       <div style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
@@ -475,6 +475,7 @@ export default function ProductsPage() {
     </CartProvider>
   )
       }
+
 
 
 
