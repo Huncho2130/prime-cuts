@@ -450,17 +450,16 @@ function ProductsContent() {
   />
 </div>
 
-
-
-      
       {/* Footer */}
-      <footer style={{
-        background: '#1a202c',
-        color: 'white',
-        padding: '30px 20px',
-        textAlign: 'center',
-        marginTop: '50px'
-      }}>
+      <footer
+        style={{
+          background: '#1a202c',
+          color: 'white',
+          padding: '30px 20px',
+          textAlign: 'center',
+          marginTop: '50px'
+        }}
+      >
         <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
         <p style={{ margin: '10px 0 0 0', color: '#D4AF37', fontSize: '14px' }}>
           Premium Meats & Seafood • Nairobi's Finest Butcher
@@ -469,26 +468,19 @@ function ProductsContent() {
 
       <Cart />
     </div>
-  )
-      
+  );
+}
 
 export default function ProductsPage() {
   return (
     <CartProvider>
       <ProductsContent />
     </CartProvider>
-  )
+  );
 }
 
 
-
-
-
-
-
-
-
-
-
+      
+      
 
 
