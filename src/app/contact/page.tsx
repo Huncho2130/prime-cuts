@@ -532,8 +532,9 @@ export default function Contact() {
           Premium Meats & Seafood • Nairobi's Trusted Butcher Since 2020
         </p>
       </footer>
-    </div>
+    
   )
 }
+
 
 
