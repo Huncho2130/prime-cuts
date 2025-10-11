@@ -78,7 +78,8 @@ export default function Home() {
                 color: 'white',
 
       /* Classic luxury feel */
-        font-family: 'Cormorant Garamond', serif;
+        fontFamily: "'Cormorant Garamond', serif",
+
               
                 fontSize: '14px',
                 margin: '2px 0 0 0',
