@@ -411,18 +411,18 @@ function ProductsContent() {
           )}
         </div>
 
-        {/* Products Grid */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '30px'
-        }}>
-          {products.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
-
+       {/* Products Grid */}
+<div
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '30px'
+  }}
+>
+  {products.map(product => (
+    <ProductCard key={product.id} product={product} />
+  ))}
+</div>
 
 {/* Halal Logo Section */}
 <div
@@ -450,23 +450,30 @@ function ProductsContent() {
   />
 </div>
 
-      {/* Footer */}
-      <footer
-        style={{
-          background: '#1a202c',
-          color: 'white',
-          padding: '30px 20px',
-          textAlign: 'center',
-          marginTop: '50px'
-        }}
-      >
-        <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
-        <p style={{ margin: '10px 0 0 0', color: '#D4AF37', fontSize: '14px' }}>
-          Premium Meats & Seafood • Nairobi's Finest Butcher
-        </p>
-      </footer>
-
-     </div>
+{/* Footer */}
+<footer
+  style={{
+    background: '#1a202c',
+    color: 'white',
+    padding: '30px 20px',
+    textAlign: 'center',
+    marginTop: '50px'
+  }}
+>
+  <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
+  <p
+    style={{
+      margin: '10px 0 0 0',
+      color: '#D4AF37',
+      fontSize: '14px'
+    }}
+  >
+    Premium Meats & Seafood • Nairobi's Finest Butcher
+  </p>
+</footer>
+</div>
+);
+}
 
 export default function ProductsPage() {
   return (
@@ -476,9 +483,6 @@ export default function ProductsPage() {
   );
 }
 
-
-      
-      
 
 
 
