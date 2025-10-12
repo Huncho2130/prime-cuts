@@ -466,7 +466,7 @@ function ProductsContent() {
         </p>
       </footer>
 
-     
+     </div>
 
 export default function ProductsPage() {
   return (
@@ -479,6 +479,7 @@ export default function ProductsPage() {
 
       
       
+
 
 
 
