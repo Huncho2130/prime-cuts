@@ -1,4 +1,5 @@
 
+
 'use client'
 import { useCart } from '@/context/cartContext'
 import { useState, useEffect } from 'react'
@@ -112,11 +113,9 @@ Please confirm availability and delivery time. Thank you! 🥩
     }
   }
 
-  if (!isOpen) return null
-
   return (
     <>
-      {/* Floating Cart Toggle Button */}
+      {/* Floating Cart Toggle Button - ALWAYS VISIBLE */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         style={{
@@ -136,7 +135,16 @@ Please confirm availability and delivery time. Thank you! 🥩
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '24px',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.transform = 'scale(1.1)';
+          e.currentTarget.style.boxShadow = '0 6px 25px rgba(0,0,0,0.4)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
         }}
       >
         🛒
@@ -153,18 +161,19 @@ Please confirm availability and delivery time. Thank you! 🥩
             fontSize: '12px',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            fontWeight: 'bold'
           }}>
             {itemCount}
           </span>
         )}
       </button>
 
-      {/* Cart Panel */}
+      {/* Cart Panel - Only shows when isOpen is true */}
       {isOpen && (
         <div style={{
           position: 'fixed',
-          bottom: '90px',
+          bottom: '90px', // Position above the toggle button
           right: '20px',
           width: isMobile ? 'calc(100% - 40px)' : '400px',
           maxWidth: '90vw',
@@ -196,7 +205,16 @@ Please confirm availability and delivery time. Thank you! 🥩
                 border: 'none',
                 color: 'white',
                 fontSize: '20px',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                padding: '5px',
+                borderRadius: '4px',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.2)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = 'none';
               }}
             >
               ✕
@@ -240,7 +258,14 @@ Please confirm availability and delivery time. Thank you! 🥩
                         borderRadius: '50%',
                         cursor: 'pointer',
                         fontSize: '16px',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.transform = 'scale(1.1)';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
                       }}
                     >
                       -
@@ -266,7 +291,14 @@ Please confirm availability and delivery time. Thank you! 🥩
                         borderRadius: '50%',
                         cursor: 'pointer',
                         fontSize: '16px',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.transform = 'scale(1.1)';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
                       }}
                     >
                       +
@@ -285,7 +317,16 @@ Please confirm availability and delivery time. Thank you! 🥩
                         color: '#dc2626',
                         cursor: 'pointer',
                         fontSize: '12px',
-                        marginTop: '5px'
+                        marginTop: '5px',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.color = '#b91c1c';
+                        e.currentTarget.style.textDecoration = 'underline';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.color = '#dc2626';
+                        e.currentTarget.style.textDecoration = 'none';
                       }}
                     >
                       Remove
@@ -322,7 +363,16 @@ Please confirm availability and delivery time. Thank you! 🥩
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '8px',
-                    marginBottom: '15px'
+                    marginBottom: '15px',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(37, 211, 102, 0.4)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
                   }}
                 >
                   <img 
@@ -392,7 +442,14 @@ Please confirm availability and delivery time. Thank you! 🥩
                         padding: '10px',
                         borderRadius: '8px',
                         cursor: 'pointer',
-                        fontSize: '14px'
+                        fontSize: '14px',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.background = '#5a6268';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.background = '#6c757d';
                       }}
                     >
                       Back
@@ -434,7 +491,14 @@ Please confirm availability and delivery time. Thank you! 🥩
                     padding: '12px',
                     borderRadius: '8px',
                     cursor: 'pointer',
-                    fontWeight: '600'
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = '#5a6268';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = '#6c757d';
                   }}
                 >
                   Clear Cart
@@ -457,6 +521,19 @@ Please confirm availability and delivery time. Thank you! 🥩
                       border: 'none',
                       cursor: isProcessing || !customerDetails.name || !customerDetails.phone || !customerDetails.address ? 'not-allowed' : 'pointer',
                       fontSize: '14px',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseOver={(e) => {
+                      if (!isProcessing && customerDetails.name && customerDetails.phone && customerDetails.address) {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.4)';
+                      }
+                    }}
+                    onMouseOut={(e) => {
+                      if (!isProcessing && customerDetails.name && customerDetails.phone && customerDetails.address) {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }
                     }}
                   >
                     {isProcessing ? '⏳ Processing...' : '📩 Complete Order via WhatsApp'}
