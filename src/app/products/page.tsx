@@ -415,8 +415,12 @@ function ProductsContent() {
 <div
   style={{
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '30px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min( 280px, 100%), 1fr))',
+    gap: ' clamp(20px, 3vw, 30px'
+
+    
+  
+     padding: '0 clamp(10px, 3vw, 20px)' 
   }}
 >
   {products.map(product => (
@@ -482,6 +486,7 @@ export default function ProductsPage() {
     </CartProvider>
   );
 }
+
 
 
 
