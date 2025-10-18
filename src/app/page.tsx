@@ -32,10 +32,12 @@ export default function Home() {
         position: 'sticky',
         top: 0,
         zIndex: 40
+         flexWrap: 'wrap', 
+         gap: '15px' // ADD THIS
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
           {/* Logo and Brand Section */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' ,     gap: '15px' }}>
             {/* Logo Image */}
             <div style={{
               width: '60px',
@@ -104,6 +106,7 @@ export default function Home() {
   background: '#2f3a42', // dark variant of header
   color: '#D4AF37',
   padding: '6px 20px',
+  fontSize: 'clamp(11px, 2.5vw, 13px)', // RESPONSIVE FONT
   fontSize: '13px',
   fontWeight: '500',
   textAlign: 'center',
@@ -130,6 +133,9 @@ export default function Home() {
       <section style={{
         position: 'relative',
         color: 'white',
+        padding: 'clamp(40px, 10vw, 120px) 20px', // RESPONSIVE PADDING
+
+        
         padding: '120px 20px',
         textAlign: 'center',
         minHeight: '600px',
