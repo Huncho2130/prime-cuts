@@ -14,10 +14,10 @@ const jsonLd = {
   name: 'Prime Cuts Kenya',
   description: 'Nairobi\'s premier butcher shop offering premium beef, goat, mutton, chicken, and seafood.',
   url: 'https://primecutskenya.co.ke',
-  telephone: '+254-700-000000', // Update with actual phone number
+  telephone: '+254-799-691784', // Update with actual phone number
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Update with actual address', // Update this
+    streetAddress: 'city market,cbd', // Update this
     addressLocality: 'Nairobi',
     addressRegion: 'Nairobi',
     postalCode: '00100',
