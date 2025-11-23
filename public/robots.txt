@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://primecutskenya.co.ke/sitemap.xml
