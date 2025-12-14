@@ -9,6 +9,9 @@ const products = [
   { id: '1', name: 'Rib Eye Steak', price: 1399, category: 'Beef' },
   { id: '2', name: 'Beef Steak', price: 799, category: 'Beef' },
   { id: '3', name: 'Beef on Bone', price: 680, category: 'Beef' },
+  { id: '31', name: 'Cow Ox Tail', price: 650, category: 'Beef' },
+  { id: '32', name: 'Premium Top Rump', price: 900, category: 'Beef' },
+  { id: '33', name: 'Premium Ossobuco', price: 700, category: 'Beef' },
   
   // Goat & Mutton
   { id: '4', name: 'Goat Meat', price: 750, category: 'Goat & Mutton' },
@@ -18,6 +21,11 @@ const products = [
   { id: '6', name: 'Chicken Breast', price: 650, category: 'Chicken' },
   { id: '7', name: 'Chicken Drumstick', price: 650, category: 'Chicken' },
   { id: '8', name: 'Chicken Gizzard', price: 550, category: 'Chicken' },
+  { id: '34', name: 'Chicken Lollipops', price: 700, category: 'Chicken' },
+  { id: '35', name: 'Chicken Minced', price: 700, category: 'Chicken' },
+  { id: '36', name: 'Chicken Thighs', price: 500, category: 'Chicken' },
+  { id: '37', name: 'Chicken Special Thighs', price: 700, category: 'Chicken' },
+  { id: '38', name: 'Thigh Boneless Chicken', price: 680, category: 'Chicken' },
   
   // Seafood
   { id: '9', name: 'Fish Fillet', price: 999, category: 'Seafood' },
@@ -26,6 +34,19 @@ const products = [
   { id: '12', name: 'Mackerel', price: 749, category: 'Seafood' },
   { id: '13', name: 'Nile Perch', price: 600, category: 'Seafood' },
   { id: '14', name: 'Salmon Fillet', price: 5500, category: 'Seafood' },
+  
+  // NEW: Additional Seafood
+  { id: '15', name: 'Salmon Cubes / Portion', price: 5000, category: 'Seafood' },
+  { id: '16', name: 'Peeled and Devined Cocktail Prawns 1kg', price: 4000, category: 'Seafood' },
+  { id: '17', name: 'Peeled and Devined Medium Prawns 1kg', price: 4000, category: 'Seafood' },
+  { id: '18', name: '2kg S2 Queen Prawns', price: 4800, category: 'Seafood' },
+  { id: '19', name: '2kg S1 Queen Prawns', price: 4800, category: 'Seafood' },
+  { id: '20', name: '2kg Tiger Prawns', price: 5500, category: 'Seafood' },
+  { id: '21', name: '2kg King Prawns', price: 8500, category: 'Seafood' },
+  { id: '22', name: '2kg Jumbo Prawns', price: 10500, category: 'Seafood' },
+  { id: '23', name: 'Pacific Mackerel', price: 800, category: 'Seafood' },
+  { id: '24', name: 'King Fish Steak', price: 1500, category: 'Seafood' },
+  { id: '25', name: 'Tuna Fish Steak', price: 1500, category: 'Seafood' },
 ]
 
 function ProductCard({ product }) {
@@ -460,6 +481,7 @@ export default function ProductsPage() {
     </CartProvider>
   )
                 }
+
 
 
 
