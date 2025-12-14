@@ -289,12 +289,7 @@ function ProductsContent() {
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
               
-                  
-                  
-                  
-                  
-                  
-                }}
+                   }}
               />
             </div>
             
@@ -415,14 +410,14 @@ function ProductsContent() {
 <div
   style={{
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(min( 280px, 100%), 1fr))',
-    gap: ' clamp(20px, 3vw, 30px'
-
-    
-  
-     padding: '0 clamp(10px, 3vw, 20px)' 
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
+    gap: 'clamp(20px, 3vw, 30px)',
+    padding: '0 clamp(10px, 3vw, 20px)',
   }}
 >
+
+
+        
   {products.map(product => (
     <ProductCard key={product.id} product={product} />
   ))}
@@ -486,6 +481,7 @@ export default function ProductsPage() {
     </CartProvider>
   );
 }
+
 
 
 
