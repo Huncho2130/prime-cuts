@@ -186,18 +186,15 @@ function ProductsContent() {
   const { cart, itemCount } = useCart()
   const [isMounted, setIsMounted] = useState(false)
 
-  // ADD PRELOAD EFFECT HERE
   useEffect(() => {
     setIsMounted(true)
     
-    // Preload other pages when user hovers over nav links
     const navLinks = document.querySelectorAll('nav a')
     
     navLinks.forEach(link => {
       link.addEventListener('mouseenter', () => {
         const href = link.getAttribute('href')
         if (href && href !== window.location.pathname) {
-          // Prefetch the page
           const linkElement = document.createElement('link')
           linkElement.rel = 'prefetch'
           linkElement.href = href
@@ -207,11 +204,9 @@ function ProductsContent() {
     })
   }, [])
 
-  // Prevent hydration by not rendering cart-dependent UI until mounted
   if (!isMounted) {
     return (
       <div style={{ minHeight: '100vh', background: '#f7fafc' }}>
-        {/* Simple loading header */}
         <header style={{
           background: '#36454F',
           color: 'white',
@@ -236,15 +231,12 @@ function ProductsContent() {
                 <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#D4AF37', margin: 0 }}>
                   PRIME CUTS KENYA
                 </h1>
-                <p style={{ color: 'white', fontSize: '14px', margin: '2px 0 0 0', fontWeight: '500' }}>
-                
-                </p>
+                <p style={{ color: 'white', fontSize: '14px', margin: '2px 0 0 0', fontWeight: '500' }}></p>
               </div>
             </div>
           </div>
         </header>
         
-        {/* Loading content */}
         <div style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: '3rem', marginBottom: '20px' }}>🥩</div>
           <p>Loading premium selection...</p>
@@ -255,7 +247,6 @@ function ProductsContent() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f7fafc' }}>
-      {/* Header */}
       <header style={{
         background: '#36454F',
         color: 'white',
@@ -263,9 +254,7 @@ function ProductsContent() {
         boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-          {/* Logo and Brand Section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            {/* Logo Image */}
             <div style={{
               width: '60px',
               height: '60px',
@@ -288,12 +277,10 @@ function ProductsContent() {
                 }}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-              
-                   }}
+                }}
               />
             </div>
             
-            {/* Brand Name and Location */}
             <div>
               <h1 style={{ 
                 fontSize: '1.8rem', 
@@ -341,37 +328,33 @@ function ProductsContent() {
           </nav>
         </div>
         
-          
-{/* Top Info Bar - Updated */}
-<div
-  style={{
-    background: '#2f3a42',
-    color: '#D4AF37',
-    padding: '6px 20px',
-    fontSize: '13px',
-    fontWeight: '500',
-    textAlign: 'center',
-  }}
->
-  <div
-    style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      display: 'flex',
-      justifyContent: 'space-between',
-      flexWrap: 'wrap',
-      gap: '5px',
-    }}
-  >
-    <span>📍 City Market, Nairobi CBD</span>
-    <span>📞 +254 799 691784</span>
-    <span>⭐ Premium Quality Guaranteed</span>
-  </div>
-</div>
+        <div
+          style={{
+            background: '#2f3a42',
+            color: '#D4AF37',
+            padding: '6px 20px',
+            fontSize: '13px',
+            fontWeight: '500',
+            textAlign: 'center',
+          }}
+        >
+          <div
+            style={{
+              maxWidth: '1200px',
+              margin: '0 auto',
+              display: 'flex',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '5px',
+            }}
+          >
+            <span>📍 City Market, Nairobi CBD</span>
+            <span>📞 +254 799 691784</span>
+            <span>⭐ Premium Quality Guaranteed</span>
+          </div>
+        </div>
+      </header>
 
-      
-
-      {/* Main Content */}
       <div style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <h1 style={{ 
@@ -406,87 +389,77 @@ function ProductsContent() {
           )}
         </div>
 
-       {/* Products Grid */}
-<div
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
-    gap: 'clamp(20px, 3vw, 30px)',
-    padding: '0 clamp(10px, 3vw, 20px)',
-  }}
->
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
+            gap: 'clamp(20px, 3vw, 30px)',
+            padding: '0 clamp(10px, 3vw, 20px)',
+          }}
+        >
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
 
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            padding: '20px 40px',
+            marginTop: '40px'
+          }}
+        >
+          <img
+            src="/halal.png"
+            alt="Halal Certified"
+            style={{
+              width: '90px',
+              height: '90px',
+              objectFit: 'contain',
+              opacity: 0.9,
+              transition: 'all 0.3s ease',
+              filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.2))',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.opacity = '1')}
+            onMouseOut={(e) => (e.currentTarget.style.opacity = '0.9')}
+          />
+        </div>
 
-        
-  {products.map(product => (
-    <ProductCard key={product.id} product={product} />
-  ))}
-</div>
-
-{/* Halal Logo Section */}
-<div
-  style={{
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    padding: '20px 40px',
-    marginTop: '40px'
-  }}
->
-  <img
-    src="/halal.png"
-    alt="Halal Certified"
-    style={{
-      width: '90px',
-      height: '90px',
-      objectFit: 'contain',
-      opacity: 0.9,
-      transition: 'all 0.3s ease',
-      filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.2))',
-    }}
-    onMouseOver={(e) => (e.currentTarget.style.opacity = '1')}
-    onMouseOut={(e) => (e.currentTarget.style.opacity = '0.9')}
-  />
-</div>
-
-{/* Footer */}
-<footer
-  style={{
-    background: '#1a202c',
-    color: 'white',
-    padding: '30px 20px',
-    textAlign: 'center',
-    marginTop: '50px'
-  }}
->
-  <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
-  <p
-    style={{
-      margin: '10px 0 0 0',
-      color: '#D4AF37',
-      fontSize: '14px'
-    }}
-  >
-    Premium Meats & Seafood • Nairobi's Finest Butcher
-  </p>
-</footer>
-</div>
+        <footer
+          style={{
+            background: '#1a202c',
+            color: 'white',
+            padding: '30px 20px',
+            textAlign: 'center',
+            marginTop: '50px'
+          }}
+        >
+          <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
+          <p
+            style={{
+              margin: '10px 0 0 0',
+              color: '#D4AF37',
+              fontSize: '14px'
+            }}
+          >
+            Premium Meats & Seafood • Nairobi's Finest Butcher
+          </p>
+        </footer>
+      </div>
+    </div>
+  )
+}
 
 export default function ProductsPage() {
   return (
     <CartProvider>
       <ProductsContent />
+      <Cart />
     </CartProvider>
-  );
-}
-
-
-
-
-
-
-
-
+  )
+                }
 
 
 
