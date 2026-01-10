@@ -317,7 +317,71 @@ export default function Contact() {
                       For inquiries and bulk orders
                     </p>
                   </div>
+                </div> 
+
+
+
+
+
+
+                    <div style={{ marginTop: '40px', textAlign: isMobile ? 'center' : 'left' }}>
+                <h3 style={{ 
+                  fontSize: isMobile ? '1.2rem' : '1.3rem', 
+                  fontWeight: 'bold', 
+                  color: '#36454F', 
+                  marginBottom: '20px' 
+                }}>
+                  Follow Us
+                </h3>
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '15px', 
+                  flexWrap: 'wrap',
+                  justifyContent: isMobile ? 'center' : 'flex-start'
+                }}>
+                  <a href="  https://www.facebook.com/profile.php?id=61585754352814" target="_blank" rel="noopener noreferrer" style={{ 
+                    background: '#1877F2', 
+                    color: 'white', 
+                    padding: isMobile ? '10px 14px' : '12px 16px', 
+                    borderRadius: '10px', 
+                    textDecoration: 'none', 
+                    fontWeight: '600', 
+                    fontSize: isMobile ? '12px' : '14px',
+                    whiteSpace: 'nowrap'
+                  }}>Facebook</a>
+                  <a href="  " target="_blank" rel="noopener noreferrer" style={{ 
+                    background: 'linear-gradient(45deg,#E4405F,#833AB4,#405DE6)', 
+                    color: 'white', 
+                    padding: isMobile ? '10px 14px' : '12px 16px', 
+                    borderRadius: '10px', 
+                    textDecoration: 'none', 
+                    fontWeight: '600', 
+                    fontSize: isMobile ? '12px' : '14px',
+                    whiteSpace: 'nowrap'
+                  }}>Instagram</a>
+                  <a href=" tiktok.com/@user30739739049823 " target="_blank" rel="noopener noreferrer" style={{
+                    background: '#000', 
+                    color: 'white', 
+                    padding: isMobile ? '10px 14px' : '12px 16px', 
+                    borderRadius: '10px', 
+                    textDecoration: 'none', 
+                    fontWeight: '600', 
+                    fontSize: isMobile ? '12px' : '14px',
+                    whiteSpace: 'nowrap'
+                  }}>TikTok</a>
+                  <a href="https://twitter.com/th" target="_blank" rel="noopener noreferrer" style={{ 
+                    background: '#000', 
+                    color: 'white', 
+                    padding: isMobile ? '10px 14px' : '12px 16px', 
+                    borderRadius: '10px', 
+                    textDecoration: 'none', 
+                    fontWeight: '600', 
+                    fontSize: isMobile ? '12px' : '14px',
+                    whiteSpace: 'nowrap'
+                  }}>X</a>
                 </div>
+              </div>
+            </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
                   <div style={{
@@ -535,6 +599,7 @@ export default function Contact() {
     </div>
   )
 }
+
 
 
 
