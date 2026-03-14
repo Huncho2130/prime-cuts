@@ -5,17 +5,22 @@ import Cart from '@/components/Cart'
 import { useEffect, useState } from 'react'
 
 const products = [
-  // Beef
+  // 
+// Beef
   { id: '1', name: 'Rib Eye Steak', price: 1399, category: 'Beef' },
   { id: '2', name: 'Beef Steak', price: 799, category: 'Beef' },
   { id: '3', name: 'Beef on Bone', price: 680, category: 'Beef' },
   { id: '31', name: 'Cow Ox Tail', price: 650, category: 'Beef' },
   { id: '32', name: 'Premium Top Rump', price: 900, category: 'Beef' },
-  { id: '33', name: 'Premium Ossobuco', price: 700, category: 'Beef' },
-  
+  { id: '33', name: 'Premium Ossobuco', price: 750, category: 'Beef' },
+  { id: '39', name: 'Sirloin Steak', price: 1450, category: 'Beef' },
+  { id: '40', name: 'Beef Fillet', price: 1450, category: 'Beef' },
+
   // Goat & Mutton
   { id: '4', name: 'Goat Meat', price: 750, category: 'Goat & Mutton' },
-  
+  { id: '43', name: 'Mutton', price: 850, category: 'Goat & Mutton' },
+  { id: '44', name: 'Lamb Rib Chops', price: 1300, category: 'Goat & Mutton' },
+
   // Chicken
   { id: '5', name: 'Whole Chicken', price: 650, category: 'Chicken' },
   { id: '6', name: 'Chicken Breast', price: 650, category: 'Chicken' },
@@ -26,7 +31,9 @@ const products = [
   { id: '36', name: 'Chicken Thighs', price: 500, category: 'Chicken' },
   { id: '37', name: 'Chicken Special Thighs', price: 700, category: 'Chicken' },
   { id: '38', name: 'Thigh Boneless Chicken', price: 680, category: 'Chicken' },
-  
+  { id: '41', name: 'Chicken Feet', price: 270, category: 'Chicken' },
+  { id: '42', name: 'Yellow Kienyeji Chicken', price: 1450, category: 'Chicken' },
+
   // Seafood
   { id: '9', name: 'Fish Fillet', price: 999, category: 'Seafood' },
   { id: '10', name: 'Tuna', price: 1349, category: 'Seafood' },
@@ -34,8 +41,8 @@ const products = [
   { id: '12', name: 'Mackerel', price: 749, category: 'Seafood' },
   { id: '13', name: 'Nile Perch', price: 600, category: 'Seafood' },
   { id: '14', name: 'Salmon Fillet', price: 5500, category: 'Seafood' },
-  
-  // NEW: Additional Seafood
+
+  // Additional Seafood
   { id: '15', name: 'Salmon Cubes / Portion', price: 5000, category: 'Seafood' },
   { id: '16', name: 'Peeled and Devined Cocktail Prawns 1kg', price: 4000, category: 'Seafood' },
   { id: '17', name: 'Peeled and Devined Medium Prawns 1kg', price: 4000, category: 'Seafood' },
@@ -47,6 +54,13 @@ const products = [
   { id: '23', name: 'Pacific Mackerel', price: 800, category: 'Seafood' },
   { id: '24', name: 'King Fish Steak', price: 1500, category: 'Seafood' },
   { id: '25', name: 'Tuna Fish Steak', price: 1500, category: 'Seafood' },
+
+  // New Fish
+  { id: '26', name: 'Whole Tilapia', price: 600, category: 'Seafood' },
+  { id: '45', name: 'Tilapia Fillet', price: 1350, category: 'Seafood' },
+  { id: '46', name: 'Whole Salmon', price: 5000, category: 'Seafood' },
+
+  
 ]
 
 function ProductCard({ product }) {
