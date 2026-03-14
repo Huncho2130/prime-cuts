@@ -5,7 +5,6 @@ import Cart from '@/components/Cart'
 import { useEffect, useState } from 'react'
 
 const products = [
-  // 
 // Beef
   { id: '1', name: 'Rib Eye Steak', price: 1399, category: 'Beef' },
   { id: '2', name: 'Beef Steak', price: 799, category: 'Beef' },
@@ -494,7 +493,7 @@ export default function ProductsPage() {
       <Cart />
     </CartProvider>
   )
-                }
+}
 
 
 
