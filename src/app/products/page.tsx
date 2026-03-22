@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 const products = [
 // Beef
   { id: '1', name: 'Rib Eye Steak', price: 1399, category: 'Beef' },
-  { id: '2', name: 'Beef Steak', price: 799, category: 'Beef' },
+  { id: '2', name: 'Beef Steak', price: 900, category: 'Beef' },
   { id: '3', name: 'Beef on Bone', price: 680, category: 'Beef' },
   { id: '31', name: 'Cow Ox Tail', price: 650, category: 'Beef' },
   { id: '32', name: 'Premium Top Rump', price: 900, category: 'Beef' },
@@ -16,12 +16,12 @@ const products = [
   { id: '40', name: 'Beef Fillet', price: 1450, category: 'Beef' },
 
   // Goat & Mutton
-  { id: '4', name: 'Goat Meat', price: 750, category: 'Goat & Mutton' },
-  { id: '43', name: 'Mutton', price: 850, category: 'Goat & Mutton' },
+  { id: '4', name: 'Goat Meat', price: 850, category: 'Goat & Mutton' },
+  { id: '43', name: 'Mutton', price: 900, category: 'Goat & Mutton' },
   { id: '44', name: 'Lamb Rib Chops', price: 1300, category: 'Goat & Mutton' },
 
   // Chicken
-  { id: '5', name: 'Whole Chicken', price: 650, category: 'Chicken' },
+  { id: '5', name: 'Whole Chicken', price: 500, category: 'Chicken' },
   { id: '6', name: 'Chicken Breast', price: 650, category: 'Chicken' },
   { id: '7', name: 'Chicken Drumstick', price: 650, category: 'Chicken' },
   { id: '8', name: 'Chicken Gizzard', price: 550, category: 'Chicken' },
@@ -58,6 +58,7 @@ const products = [
   { id: '26', name: 'Whole Tilapia', price: 600, category: 'Seafood' },
   { id: '45', name: 'Tilapia Fillet', price: 1350, category: 'Seafood' },
   { id: '46', name: 'Whole Salmon', price: 5000, category: 'Seafood' },
+  { id: '56', name: 'Whole Nile Perch', price: 600, category: 'Seafood' },
 
   
 ]
