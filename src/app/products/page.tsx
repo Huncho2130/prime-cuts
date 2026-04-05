@@ -8,10 +8,10 @@ const products = [
 // Beef
   { id: '1', name: 'Rib Eye Steak', price: 1399, category: 'Beef' },
   { id: '2', name: 'Beef Steak', price: 900, category: 'Beef' },
-  { id: '3', name: 'Beef on Bone', price: 680, category: 'Beef' },
-  { id: '31', name: 'Cow Ox Tail', price: 650, category: 'Beef' },
+  { id: '3', name: 'Beef on Bone', price: 800, category: 'Beef' },
+  { id: '31', name: 'Cow Ox Tail', price: 800, category: 'Beef' },
   { id: '32', name: 'Premium Top Rump', price: 900, category: 'Beef' },
-  { id: '33', name: 'Premium Ossobuco', price: 750, category: 'Beef' },
+  { id: '33', name: 'Premium Ossobuco', price: 800, category: 'Beef' },
   { id: '39', name: 'Sirloin Steak', price: 1450, category: 'Beef' },
   { id: '40', name: 'Beef Fillet', price: 1450, category: 'Beef' },
 
