@@ -88,7 +88,7 @@ Please confirm availability and delivery time. Thank you! 🥩
       `.trim()
 
       // Send to your WhatsApp number
-      const businessPhone = '254707636105'
+      const businessPhone = '254799691784'
       window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(orderDetails)}`, '_blank')
       
       // Reset after successful order
