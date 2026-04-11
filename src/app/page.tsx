@@ -261,7 +261,7 @@ export default function Home() {
         padding: '30px 20px',
         textAlign: 'center'
       }}>
-        <p style={{ margin: 0 }}>&copy; 2025 Prime Cuts Kenya. All rights reserved.</p>
+        <p style={{ margin: 0 }}>&copy; 2026 Prime Cuts Kenya. All rights reserved.</p>
       </footer>
     </div>
   )
