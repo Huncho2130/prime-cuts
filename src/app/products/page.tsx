@@ -12,9 +12,10 @@ const products = [
   { id: '31', name: 'Cow Ox Tail', price: 800, category: 'Beef' },
   { id: '32', name: 'Premium Top Rump', price: 900, category: 'Beef' },
   { id: '33', name: 'Premium Ossobuco', price: 850, category: 'Beef' },
+  { id: '33', name: 'Ossombucco', price: 850, category: 'Beef' },
   { id: '39', name: 'Sirloin Steak', price: 1450, category: 'Beef' },
   { id: '40', name: 'Beef Fillet', price: 1450, category: 'Beef' },
-
+{ id: '40', name: 'T-bone', price: 1450, category: 'Beef' },
   // Goat & Mutton
   { id: '4', name: 'Goat Meat', price: 850, category: 'Goat & Mutton' },
   { id: '4', name: 'Goat Liver', price: 750, category: 'Goat & Mutton' },
@@ -43,6 +44,8 @@ const products = [
   { id: '12', name: 'Mackerel', price: 749, category: 'Seafood' },
   { id: '13', name: 'Nile Perch', price: 600, category: 'Seafood' },
   { id: '14', name: 'Salmon Fillet', price: 5500, category: 'Seafood' },
+  { id: '14', name: 'Nile Perch Steak', price: 650, category: 'Seafood' },
+  
 
   // Additional Seafood
   { id: '15', name: 'Salmon Cubes / Portion', price: 5000, category: 'Seafood' },
