@@ -17,11 +17,14 @@ const products = [
 
   // Goat & Mutton
   { id: '4', name: 'Goat Meat', price: 850, category: 'Goat & Mutton' },
+  { id: '4', name: 'Goat Liver', price: 750, category: 'Goat & Mutton' },
   { id: '43', name: 'Mutton', price: 900, category: 'Goat & Mutton' },
   { id: '44', name: 'Lamb Rib Chops', price: 1300, category: 'Goat & Mutton' },
 
   // Chicken
-  { id: '5', name: 'Whole Chicken', price: 500, category: 'Chicken' },
+  { id: '5', name: 'Whole Chicken', price: 470, category: 'Chicken' },
+{ id: '5', name: 'Breast on Bone', price: 650, category: 'Chicken' },
+   { id: '5', name: 'Chicken Wings', price: 500, category: 'Chicken' },
   { id: '6', name: 'Chicken Breast', price: 650, category: 'Chicken' },
   { id: '7', name: 'Chicken Drumstick', price: 650, category: 'Chicken' },
   { id: '8', name: 'Chicken Gizzard', price: 550, category: 'Chicken' },
