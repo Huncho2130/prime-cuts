@@ -65,7 +65,7 @@ const products = [
   { id: '45', name: 'Tilapia Fillet', price: 1350, category: 'Seafood' },
   { id: '46', name: 'Whole Salmon', price: 5000, category: 'Seafood' },
   { id: '56', name: 'Whole Nile Perch', price: 600, category: 'Seafood' },
-{ id: '57', name: 'Sardine', price: 600, category: 'Seafood' },
+{ id: '57', name: 'Sardine', price: 750, category: 'Seafood' },
   
 ]
 
