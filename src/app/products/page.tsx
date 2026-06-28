@@ -17,7 +17,7 @@ const products = [
   { id: '40', name: 'Beef Fillet', price: 1450, category: 'Beef' },
 { id: '40', name: 'T-bone', price: 1450, category: 'Beef' },
   // Goat & Mutton
-  { id: '4', name: 'Goat Meat', price: 850, category: 'Goat & Mutton' },
+  { id: '4', name: 'Goat Meat', price: 800, category: 'Goat & Mutton' },
   { id: '4', name: 'Goat Liver', price: 750, category: 'Goat & Mutton' },
   { id: '43', name: 'Mutton', price: 900, category: 'Goat & Mutton' },
   { id: '44', name: 'Lamb Rib Chops', price: 1300, category: 'Goat & Mutton' },
