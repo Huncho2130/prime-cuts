@@ -41,7 +41,7 @@ const products = [
   { id: '9', name: 'Fish Fillet', price: 999, category: 'Seafood' },
   { id: '10', name: 'Tuna', price: 1349, category: 'Seafood' },
   { id: '11', name: 'Kingfish', price: 1199, category: 'Seafood' },
-  { id: '12', name: 'Mackerel', price: 749, category: 'Seafood' },
+  { id: '12', name: 'Mackerel', price: 850, category: 'Seafood' },
   { id: '13', name: 'Nile Perch', price: 600, category: 'Seafood' },
   { id: '14', name: 'Salmon Fillet', price: 5500, category: 'Seafood' },
   { id: '14', name: 'Nile Perch Steak', price: 650, category: 'Seafood' },
